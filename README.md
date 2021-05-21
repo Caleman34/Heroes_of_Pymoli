@@ -474,61 +474,61 @@ popular_df.head()
 ```
 <div>
 <table border=\"1\" class=\"dataframe\">
-       "  <thead>
-       "    <tr style=\"text-align: right;\">
-       "      <th></th>
-       "      <th></th>
-       "      <th>Purchase Count</th>
-       "      <th>Item Price</th>
-       "      <th>Total Purchase Value</th>
-       "    </tr>
-       "    <tr>
-       "      <th>Item ID</th>
-       "      <th>Item Name</th>
-       "      <th></th>
-       "      <th></th>
-       "      <th></th>
-       "    </tr>
-       "  </thead>
-       "  <tbody>
-       "    <tr>
-       "      <th>92</th>
-       "      <th>Final Critic</th>
-       "      <td>13</td>
-       "      <td>$4.61</td>
-       "      <td>$59.99</td>
-       "    </tr>
-       "    <tr>
-       "      <th>178</th>
-       "      <th>Oathbreaker, Last Hope of the Breaking Storm</th>
-       "      <td>12</td>
-       "      <td>$4.23</td>
-       "      <td>$50.76</td>
-       "    </tr>
-       "    <tr>
-       "      <th>145</th>
-       "      <th>Fiery Glass Crusader</th>
-       "      <td>9</td>
-       "      <td>$4.58</td>
-       "      <td>$41.22</td>
-       "    </tr>
-       "    <tr>
-       "      <th>132</th>
-       "      <th>Persuasion</th>
-       "      <td>9</td>
-       "      <td>$3.22</td>
-       "      <td>$28.99</td>
-       "    </tr>
-       "    <tr>
-       "      <th>108</th>
-       "      <th>Extraction, Quickblade Of Trembling Hands</th>
-       "      <td>9</td>
-       "      <td>$3.53</td>
-       "      <td>$31.77</td>
-       "    </tr>
-       "  </tbody>
-       "</table>
-       "</div>
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th></th>
+             <th>Purchase Count</th>
+             <th>Item Price</th>
+             <th>Total Purchase Value</th>
+           </tr>
+           <tr>
+             <th>Item ID</th>
+             <th>Item Name</th>
+             <th></th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>92</th>
+             <th>Final Critic</th>
+             <td>13</td>
+             <td>$4.61</td>
+             <td>$59.99</td>
+           </tr>
+           <tr>
+             <th>178</th>
+             <th>Oathbreaker, Last Hope of the Breaking Storm</th>
+             <td>12</td>
+             <td>$4.23</td>
+             <td>$50.76</td>
+           </tr>
+           <tr>
+             <th>145</th>
+             <th>Fiery Glass Crusader</th>
+             <td>9</td>
+             <td>$4.58</td>
+             <td>$41.22</td>
+           </tr>
+           <tr>
+             <th>132</th>
+             <th>Persuasion</th>
+             <td>9</td>
+             <td>$3.22</td>
+             <td>$28.99</td>
+           </tr>
+           <tr>
+             <th>108</th>
+             <th>Extraction, Quickblade Of Trembling Hands</th>
+             <td>9</td>
+             <td>$3.53</td>
+             <td>$31.77</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 
 ### Most Profitable Items
 
