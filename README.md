@@ -277,60 +277,51 @@ purchaseAnalysisByAge = pd.DataFrame({"Purchase Count": countPurchases,
 
 purchaseAnalysisByAge
 ```
-<div>
 <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
-             <th>Total Player Count</th>
-             <th>Percent of Players</th>
+             <th>Purchase Count</th>
+             <th>Average Purchase Price</th>
+             <th>Total Purchase Value</th>
            </tr>
            <tr>
-             <th>Age Group</th>
+             <th>SN</th>
+             <th></th>
              <th></th>
              <th></th>
            </tr>
          </thead>
          <tbody>
            <tr>
-             <th>&lt;10</th>
-             <td>17</td>
-             <td>2.95%</td>
+             <th>Haillyrgue51</th>
+             <td>3</td>
+             <td>$3.17</td>
+             <td>$9.50</td>
            </tr>
            <tr>
-             <th>10-14</th>
-             <td>22</td>
-             <td>3.82%</tr>
+             <th>Phistym51</th>
+             <td>2</td>
+             <td>$4.75</td>
+             <td>$9.50</td>
            </tr>
            <tr>
-             <th>15-19</th>
-             <td>107</td>
-             <td>18.58%</td>
+             <th>Lamil79</th>
+             <td>2</td>
+             <td>$4.64</td>
+             <td>$9.29</td>
            </tr>
            <tr>
-             <th>20-24</th>
-             <td>258</td>
-             <td>44.79%</td>
+             <th>Aina42</th>
+             <td>3</td>
+             <td>$3.07</td>
+             <td>$9.22</td>
            </tr>
            <tr>
-             <th>25-29</th>\
-             <td>77</td>
-             <td>13.37%</td>
-           </tr>
-           <tr>
-             <th>30-34</th>
-             <td>52</td>
-             <td>9.03%</td>
-           </tr>
-           <tr>
-             <th>35-39</th>
-             <td>31</td>
-             <td>5.38%</td>
-           </tr>
-           <tr>
-             <th>40+</th>
-             <td>12</td>
-             <td>2.08%</td>
+             <th>Saesrideu94</th>
+             <td>2</td>
+             <td>$4.59</td>
+             <td>$9.18</td>
            </tr>
          </tbody>
        </table>
@@ -369,6 +360,63 @@ formatedTopSpender = topSpenders_df.sort_values(["Total Purchase Value"], ascend
 
 formatedTopSpender
 ```
+<div>
+<table border=\"1\" class=\"dataframe\">
+       "  <thead>
+       "    <tr style=\"text-align: right;\">
+       "      <th></th>
+       "      <th></th>
+       "      <th>Purchase Count</th>
+       "      <th>Item Price</th>
+       "      <th>Total Purchase Value</th>
+       "    </tr>
+       "    <tr>
+       "      <th>Item ID</th>
+       "      <th>Item Name</th>
+       "      <th></th>
+       "      <th></th>
+       "      <th></th>
+       "    </tr>
+       "  </thead>
+       "  <tbody>
+       "    <tr>
+       "      <th>92</th>
+       "      <th>Final Critic</th>
+       "      <td>13</td>
+       "      <td>$4.61</td>
+       "      <td>$59.99</td>
+       "    </tr>
+       "    <tr>
+       "      <th>178</th>
+       "      <th>Oathbreaker, Last Hope of the Breaking Storm</th>
+       "      <td>12</td>
+       "      <td>$4.23</td>
+       "      <td>$50.76</td>
+       "    </tr>
+       "    <tr>
+       "      <th>145</th>
+       "      <th>Fiery Glass Crusader</th>
+       "      <td>9</td>
+       "      <td>$4.58</td>
+       "      <td>$41.22</td>
+       "    </tr>
+       "    <tr>
+       "      <th>132</th>
+       "      <th>Persuasion</th>
+       "      <td>9</td>
+       "      <td>$3.22</td>
+       "      <td>$28.99</td>
+       "    </tr>
+       "    <tr>
+       "      <th>108</th>
+       "      <th>Extraction, Quickblade Of Trembling Hands</th>
+       "      <td>9</td>
+       "      <td>$3.53</td>
+       "      <td>$31.77</td>
+       "    </tr>
+       "  </tbody>
+       "</table>
+       "</div>
 
 ### Most Popular Items
 
@@ -403,6 +451,63 @@ popular_df = top_items.sort_values(["Purchase Count"], ascending = False)
                                                           
 popular_df.head()
 ```
+<div>
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th></th>
+             <th>Purchase Count</th>
+             <th>Item Price</th>
+             <th>Total Purchase Value</th>
+           </tr>
+           <tr>
+             <th>Item ID</th>
+             <th>Item Name</th>
+             <th></th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>92</th>
+             <th>Final Critic</th>
+             <td>13</td>
+             <td>4.614615</td>
+             <td>59.99</td>
+           </tr>
+           <tr>
+             <th>178</th>
+             <th>Oathbreaker, Last Hope of the Breaking Storm</th>
+             <td>12</td>
+             <td>4.230000</td>
+             <td>50.76</td>
+           </tr>
+           <tr>
+             <th>82</th>
+             <th>Nirvana</th>
+             <td>9</td>\
+             <td>4.900000</td>
+             <td>44.10</td>
+           </tr>
+           <tr>
+             <th>145</th>
+             <th>Fiery Glass Crusader</th>
+             <td>9</td>
+             <td>4.580000</td>
+             <td>41.22</td>
+           </tr>
+           <tr>
+             <th>103</th>
+             <th>Singed Scalpel</th>
+             <td>8</td>
+             <td>4.350000</td>
+             <td>34.80</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 
 ### Most Profitable Items
 
