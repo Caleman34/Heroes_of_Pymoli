@@ -80,6 +80,28 @@ purchasingAnalysis_df["Total Revenue"] = purchasingAnalysis_df["Total Revenue"].
 
 purchasingAnalysis_df
 ```
+<div>
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Number of unique Items</th>
+             <th>Average Price</th>
+             <th>Number of Purchases</th>
+             <th>Total Revenue</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>0</th>
+             <td>179</td>
+             <td>$3.05</td>
+             <td>780</td>
+             <td>$2,379.77</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>"
 
 ### Gender Demographics
 
