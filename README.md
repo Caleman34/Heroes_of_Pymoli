@@ -101,8 +101,7 @@ purchasingAnalysis_df
            </tr>
          </tbody>
        </table>
-       </div>"
-
+       </div>
 ### Gender Demographics
 
 * Percentage and Count of Male Players
@@ -140,6 +139,39 @@ reIndexedGenderDemographics_df = genderDemographics_df.set_index("")
 
 reIndexedGenderDemographics_df
 ```
+<div>
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Total Count</th>
+             <th>Percentage of Players</th>
+           </tr>
+           <tr>
+             <th></th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>Male</th>
+             <td>484</td>
+             <td>84.03%</td>
+           </tr>
+           <tr>
+             <th>Female</th>
+             <td>81</td>
+             <td>14.06%</td>
+           </tr>
+           <tr>
+             <th>Other / Non-Disclosed</th>
+             <td>11</td>
+             <td>1.91%</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 ### Purchasing Analysis (Gender)
 
 * The below each broken by gender
