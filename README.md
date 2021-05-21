@@ -213,6 +213,113 @@ genderPurchases_df
              <th>Purchase Count</th>
              <th>Average Purchase Price</th>
              <th>Total Purchase Value</th>
+             <th>Average Total Purchase Per Person</th>
+           </tr>
+           <tr>
+             <th>Age Group</th>
+             <th></th>
+             <th></th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>&lt;10</th>
+             <td>23</td>
+             <td>$3.35</td>
+             <td>$77.13</td>
+             <td>$4.54</td>
+           </tr>
+           <tr>
+             <th>10-14</th>
+             <td>28</td>
+             <td>$2.96</td>
+             <td>$82.78</td>
+             <td>$3.76</td>
+           </tr>\
+           <tr>
+             <th>15-19</th>
+             <td>136</td>
+             <td>$3.04</td>
+             <td>$412.89</td>
+             <td>$3.86</td>
+           </tr>
+           <tr>
+             <th>20-24</th>
+             <td>365</td>
+             <td>$3.05</td>
+             <td>$1,114.06</td>
+             <td>$4.32</td>
+           </tr>
+           <tr>
+             <th>25-29</th>
+             <td>101</td>
+             <td>$2.90</td>
+             <td>$293.00</td>
+             <td>$3.81</td>
+           </tr>
+           <tr>
+             <th>30-34</th>
+             <td>73</td>
+             <td>$2.93</td>
+             <td>$214.00</td>
+             <td>$4.12</td>
+           </tr>
+           <tr>
+             <th>35-39</th>
+             <td>41</td>
+             <td>$3.60</td>
+             <td>$147.67</td>
+             <td>$4.76</td>
+           </tr>
+           <tr>
+             <th>40+</th>
+             <td>13</td>
+             <td>$2.94</td>
+             <td>$38.24</td>
+             <td>$3.19</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
+
+### Age Demographics
+
+* The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
+  * Purchase Count
+  * Average Purchase Price
+  * Total Purchase Value
+  * Average Purchase Total per Person by Age Group
+```python
+#Purchasing Analysis by Age
+countPurchases = ageGroup["Purchase ID"].count()
+
+#average Purchase Price
+averagePurchasePrice = ageGroup["Price"].mean()
+
+#total purcahse value
+totalPurchaseValue = ageGroup["Price"].sum()
+
+#average total purchase per person
+averagePersonPurchase = totalPurchaseValue / totalCountAge
+
+#create new data frame with appropriste columns
+purchaseAnalysisByAge = pd.DataFrame({"Purchase Count": countPurchases,
+                                     "Average Purchase Price": averagePurchasePrice.map("${:,.2f}".format),
+                                     "Total Purchase Value": totalPurchaseValue.map("${:,.2f}".format),
+                                     "Average Total Purchase Per Person": averagePersonPurchase.map("${:,.2f}".format)})
+
+purchaseAnalysisByAge
+```
+<div>
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Purchase Count</th>
+             <th>Average Purchase Price</th>
+             <th>Total Purchase Value</th>
              <th>Average Total Purchase per Person</th>
            </tr>
            <tr>
@@ -249,33 +356,38 @@ genderPurchases_df
        </table>
        </div>
 
-### Age Demographics
+### Top Spenders
 
-* The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
+* Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
+  * SN
   * Purchase Count
   * Average Purchase Price
   * Total Purchase Value
-  * Average Purchase Total per Person by Age Group
 ```python
-#Purchasing Analysis by Age
-countPurchases = ageGroup["Purchase ID"].count()
+#Top Spenders
 
-#average Purchase Price
-averagePurchasePrice = ageGroup["Price"].mean()
+#group purchases by SN
+topSpenders = original_df.groupby("SN")
 
-#total purcahse value
-totalPurchaseValue = ageGroup["Price"].sum()
+#count purchased items
+spenderPurchaseCount = topSpenders["Purchase ID"].count()
 
-#average total purchase per person
-averagePersonPurchase = totalPurchaseValue / totalCountAge
+#count purchased items
+spenderPurchaseAverage = topSpenders["Price"].mean()
+
+#Total Purchase Value
+spenderPurchasesTotal = topSpenders["Price"].sum()
 
 #create new data frame with appropriste columns
-purchaseAnalysisByAge = pd.DataFrame({"Purchase Count": countPurchases,
-                                     "Average Purchase Price": averagePurchasePrice.map("${:,.2f}".format),
-                                     "Total Purchase Value": totalPurchaseValue.map("${:,.2f}".format),
-                                     "Average Total Purchase Per Person": averagePersonPurchase.map("${:,.2f}".format)})
+topSpenders_df = pd.DataFrame({"Purchase Count": spenderPurchaseCount, 
+                               "Average Purchase Price": spenderPurchaseAverage.map("${:,.2f}".format),
+                               "Total Purchase Value": spenderPurchasesTotal.map("${:,.2f}".format)})
 
-purchaseAnalysisByAge
+
+#sort descending then format cells with correct values
+formatedTopSpender = topSpenders_df.sort_values(["Total Purchase Value"], ascending=False).head()
+
+formatedTopSpender
 ```
 <table border=\"1\" class=\"dataframe\">
          <thead>
@@ -327,38 +439,38 @@ purchaseAnalysisByAge
        </table>
        </div>
 
-### Top Spenders
+### Most Popular Items
 
-* Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
-  * SN
+* Identify the 5 most popular items by purchase count, then list (in a table):
+  * Item ID
+  * Item Name
   * Purchase Count
-  * Average Purchase Price
+  * Item Price
   * Total Purchase Value
 ```python
-#Top Spenders
+#Most Popular Items
 
-#group purchases by SN
-topSpenders = original_df.groupby("SN")
+#group the df by item, id, and item name    
+popular_items = original_df.groupby(["Item ID","Item Name"])
 
-#count purchased items
-spenderPurchaseCount = topSpenders["Purchase ID"].count()
+#calculate purchase count for each purchase id
+purchase_count = popular_items["Purchase ID"].count()
 
-#count purchased items
-spenderPurchaseAverage = topSpenders["Price"].mean()
+#calculate total price for each group values
+total_value = popular_items["Price"].sum()
 
-#Total Purchase Value
-spenderPurchasesTotal = topSpenders["Price"].sum()
+#calculate item price by dividing total to count of purchase 
+item_price = total_value / purchase_count
 
-#create new data frame with appropriste columns
-topSpenders_df = pd.DataFrame({"Purchase Count": spenderPurchaseCount, 
-                               "Average Purchase Price": spenderPurchaseAverage.map("${:,.2f}".format),
-                               "Total Purchase Value": spenderPurchasesTotal.map("${:,.2f}".format)})
+#create a df to display data
+top_items = pd.DataFrame({"Purchase Count": purchase_count,
+                         "Item Price": item_price.map("${:,.2f}".format),
+                         "Total Purchase Value": total_value.map("${:,.2f}".format)})
 
-
-#sort descending then format cells with correct values
-formatedTopSpender = topSpenders_df.sort_values(["Total Purchase Value"], ascending=False).head()
-
-formatedTopSpender
+#sort the data to get top 5 popular items
+popular_df = top_items.sort_values(["Purchase Count"], ascending = False)
+                                                          
+popular_df.head()
 ```
 <div>
 <table border=\"1\" class=\"dataframe\">
@@ -418,38 +530,20 @@ formatedTopSpender
        "</table>
        "</div>
 
-### Most Popular Items
+### Most Profitable Items
 
-* Identify the 5 most popular items by purchase count, then list (in a table):
+* Identify the 5 most profitable items by total purchase value, then list (in a table):
   * Item ID
   * Item Name
   * Purchase Count
   * Item Price
   * Total Purchase Value
 ```python
-#Most Popular Items
+# Sort the data frame by total purchase value 
+profitable_items = top_items.sort_values(["Total Purchase Value"], ascending = False)
 
-#group the df by item, id, and item name    
-popular_items = original_df.groupby(["Item ID","Item Name"])
-
-#calculate purchase count for each purchase id
-purchase_count = popular_items["Purchase ID"].count()
-
-#calculate total price for each group values
-total_value = popular_items["Price"].sum()
-
-#calculate item price by dividing total to count of purchase 
-item_price = total_value / purchase_count
-
-#create a df to display data
-top_items = pd.DataFrame({"Purchase Count": purchase_count,
-                         "Item Price": item_price.map("${:,.2f}".format),
-                         "Total Purchase Value": total_value.map("${:,.2f}".format)})
-
-#sort the data to get top 5 popular items
-popular_df = top_items.sort_values(["Purchase Count"], ascending = False)
-                                                          
-popular_df.head()
+# Display the new data frame
+profitable_items.head()
 ```
 <div>
 <table border=\"1\" class=\"dataframe\">
@@ -508,19 +602,3 @@ popular_df.head()
          </tbody>
        </table>
        </div>
-
-### Most Profitable Items
-
-* Identify the 5 most profitable items by total purchase value, then list (in a table):
-  * Item ID
-  * Item Name
-  * Purchase Count
-  * Item Price
-  * Total Purchase Value
-```python
-# Sort the data frame by total purchase value 
-profitable_items = top_items.sort_values(["Total Purchase Value"], ascending = False)
-
-# Display the new data frame
-profitable_items.head()
-```
