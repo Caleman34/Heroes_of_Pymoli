@@ -205,6 +205,7 @@ genderPurchases_df = pd.DataFrame({"Purchase Count": purchaseCount,
                                   })
 genderPurchases_df
 ```
+<div>
 <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
@@ -276,6 +277,64 @@ purchaseAnalysisByAge = pd.DataFrame({"Purchase Count": countPurchases,
 
 purchaseAnalysisByAge
 ```
+<div>
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Total Player Count</th>
+             <th>Percent of Players</th>
+           </tr>
+           <tr>
+             <th>Age Group</th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>&lt;10</th>
+             <td>17</td>
+             <td>2.95%</td>
+           </tr>
+           <tr>
+             <th>10-14</th>
+             <td>22</td>
+             <td>3.82%</tr>
+           </tr>
+           <tr>
+             <th>15-19</th>
+             <td>107</td>
+             <td>18.58%</td>
+           </tr>
+           <tr>
+             <th>20-24</th>
+             <td>258</td>
+             <td>44.79%</td>
+           </tr>
+           <tr>
+             <th>25-29</th>\
+             <td>77</td>
+             <td>13.37%</td>
+           </tr>
+           <tr>
+             <th>30-34</th>
+             <td>52</td>
+             <td>9.03%</td>
+           </tr>
+           <tr>
+             <th>35-39</th>
+             <td>31</td>
+             <td>5.38%</td>
+           </tr>
+           <tr>
+             <th>40+</th>
+             <td>12</td>
+             <td>2.08%</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 
 ### Top Spenders
 
