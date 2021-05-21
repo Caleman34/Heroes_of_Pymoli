@@ -102,6 +102,7 @@ purchasingAnalysis_df
          </tbody>
        </table>
        </div>
+
 ### Gender Demographics
 
 * Percentage and Count of Male Players
@@ -172,6 +173,7 @@ reIndexedGenderDemographics_df
          </tbody>
        </table>
        </div>
+
 ### Purchasing Analysis (Gender)
 
 * The below each broken by gender
@@ -203,6 +205,48 @@ genderPurchases_df = pd.DataFrame({"Purchase Count": purchaseCount,
                                   })
 genderPurchases_df
 ```
+<table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Purchase Count</th>
+             <th>Average Purchase Price</th>
+             <th>Total Purchase Value</th>
+             <th>Average Total Purchase per Person</th>
+           </tr>
+           <tr>
+             <th>Gender</th>
+             <th></th>
+             <th></th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>\
+             <th>Female</th>
+             <td>113</td>
+             <td>$3.20</td>
+             <td>$361.94</td>
+             <td>$0.63</td>
+           </tr>
+           <tr>
+             <th>Male</th>
+             <td>652</td>
+             <td>$3.02</td>
+             <td>$1967.64</td>
+             <td>$3.42</td>
+           </tr>
+           <tr>
+             <th>Other / Non-Disclosed</th>
+             <td>15</td>
+             <td>$3.35</td>
+             <td>$50.19</td>
+             <td>$0.09</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 
 ### Age Demographics
 
