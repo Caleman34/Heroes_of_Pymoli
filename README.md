@@ -35,35 +35,22 @@ playerNames = len(original_df["SN"].unique())
 totalPlayers_df = pd.DataFrame({"Total Players": [playerNames]})
 totalPlayers_df
 ```
-<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>Total Players</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>576</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
+<div>
+       <table border=\"1\" class=\"dataframe\">
+         <thead>
+           <tr style=\"text-align: right;">
+             <th></th>
+             <th>Total Players</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>0</th>
+             <td>576</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
 
 ### Purchasing Analysis (Total)
 
