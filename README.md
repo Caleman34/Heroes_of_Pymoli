@@ -356,6 +356,88 @@ purchaseAnalysisByAge
        </table>
        </div>
 
+* Percent of players by age group
+```python
+#create bins for ages
+ageBins = [0, 9.99, 14.99, 19.99, 24.99, 29.99, 34.99, 39.99, 150]
+ageBinsNames = ["<10", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40+"]
+
+#Slice data intogroupd using pd.cut
+original_df["Age Group"] = pd.cut(original_df["Age"], ageBins, labels = ageBinsNames,)
+
+#group data into bins
+ageGroup = original_df.groupby("Age Group")
+
+#count number of unique plapyers by age for age group
+totalCountAge = ageGroup["SN"].nunique()
+
+#percentage of players by age group
+percentAgeGroup = (totalCountAge / playerNames) * 100
+
+#create new data frame with appropriate columns
+ageDemographics_df = pd.DataFrame({"Total Player Count": totalCountAge, "Percent of Players": percentAgeGroup.map("{:,.2f}%".format)})
+
+ageDemographics_df
+```
+<div>
+<table border=\"1\" class=\"dataframe\">\
+         <thead>
+           <tr style=\"text-align: right;\">
+             <th></th>
+             <th>Total Player Count</th>
+             <th>Percent of Players</th>
+           </tr>
+           <tr>
+             <th>Age Group</th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <th>&lt;10</th>
+             <td>17</td>
+             <td>2.95%</td>
+           </tr>
+           <tr>
+             <th>10-14</th>
+             <td>22</td>
+             <td>3.82%</td>
+           </tr>
+           <tr>
+             <th>15-19</th>
+             <td>107</td>
+             <td>18.58%</td>
+           </tr>
+           <tr>
+             <th>20-24</th>
+             <td>258</td>
+             <td>44.79%</td>
+           </tr>
+           <tr>
+             <th>25-29</th>
+             <td>77</td>
+             <td>13.37%</td>
+           </tr>
+           <tr>
+             <th>30-34</th>
+             <td>52</td>
+             <td>9.03%</td>
+           </tr>
+           <tr>
+             <th>35-39</th>
+             <td>31</td>\n",
+             <td>5.38%</td>
+           </tr>
+           <tr>
+             <th>40+</th>
+             <td>12</td>
+             <td>2.08%</td>
+           </tr>
+         </tbody>
+       </table>
+       </div>
+
 ### Top Spenders
 
 * Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
