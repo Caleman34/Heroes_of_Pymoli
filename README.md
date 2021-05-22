@@ -236,7 +236,7 @@ genderPurchases_df
              <td>$2.96</td>
              <td>$82.78</td>
              <td>$3.76</td>
-           </tr>\
+           </tr>
            <tr>
              <th>15-19</th>
              <td>136</td>
@@ -330,7 +330,7 @@ purchaseAnalysisByAge
            </tr>
          </thead>
          <tbody>
-           <tr>\
+           <tr>
              <th>Female</th>
              <td>113</td>
              <td>$3.20</td>
@@ -379,7 +379,7 @@ ageDemographics_df = pd.DataFrame({"Total Player Count": totalCountAge, "Percent
 ageDemographics_df
 ```
 <div>
-        <table border=\"1\" class=\"dataframe\">\
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -425,7 +425,7 @@ ageDemographics_df
            </tr>
            <tr>
              <th>35-39</th>
-             <td>31</td>\n",
+             <td>31</td>
              <td>5.38%</td>
            </tr>
            <tr>
@@ -435,7 +435,7 @@ ageDemographics_df
            </tr>
          </tbody>
        </table>
-      </div>
+       </div>
 
 ### Top Spenders
 
@@ -630,7 +630,7 @@ profitable_items.head()
 <div>
         <table border=\"1\" class=\"dataframe\">
          <thead>
-           <tr style=\"text-align: right;\">
+           <tr style=\"text-align: right;">
              <th></th>
              <th></th>
              <th>Purchase Count</th>
@@ -663,7 +663,7 @@ profitable_items.head()
            <tr>
              <th>82</th>
              <th>Nirvana</th>
-             <td>9</td>\
+             <td>9</td>
              <td>4.900000</td>
              <td>44.10</td>
            </tr>
