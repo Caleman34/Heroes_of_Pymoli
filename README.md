@@ -7,7 +7,6 @@ Congratulations! After a lot of hard work in the data munging mines, you've land
 Like many others in its genre, the game is free-to-play, but players are encouraged to purchase optional items that enhance their playing experience. As a first task, the company would like you to generate a report that breaks down the game's purchasing data into meaningful insights.
 
 ## Requirements, Code and Results
-Your final report should include each of the following:
 
 ### Player Count (total players)
 * Import and read into csv file
@@ -81,7 +80,7 @@ purchasingAnalysis_df["Total Revenue"] = purchasingAnalysis_df["Total Revenue"].
 purchasingAnalysis_df
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -141,7 +140,7 @@ reIndexedGenderDemographics_df = genderDemographics_df.set_index("")
 reIndexedGenderDemographics_df
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -206,7 +205,7 @@ genderPurchases_df = pd.DataFrame({"Purchase Count": purchaseCount,
 genderPurchases_df
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -313,7 +312,7 @@ purchaseAnalysisByAge = pd.DataFrame({"Purchase Count": countPurchases,
 purchaseAnalysisByAge
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+       <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -380,7 +379,7 @@ ageDemographics_df = pd.DataFrame({"Total Player Count": totalCountAge, "Percent
 ageDemographics_df
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">\
+        <table border=\"1\" class=\"dataframe\">\
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -436,7 +435,7 @@ ageDemographics_df
            </tr>
          </tbody>
        </table>
-       </div>
+      </div>
 
 ### Top Spenders
 
@@ -471,7 +470,8 @@ formatedTopSpender = topSpenders_df.sort_values(["Total Purchase Value"], ascend
 
 formatedTopSpender
 ```
-<table border=\"1\" class=\"dataframe\">
+<div>
+       <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -555,7 +555,7 @@ popular_df = top_items.sort_values(["Purchase Count"], ascending = False)
 popular_df.head()
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
@@ -628,7 +628,7 @@ profitable_items = top_items.sort_values(["Total Purchase Value"], ascending = F
 profitable_items.head()
 ```
 <div>
-<table border=\"1\" class=\"dataframe\">
+        <table border=\"1\" class=\"dataframe\">
          <thead>
            <tr style=\"text-align: right;\">
              <th></th>
