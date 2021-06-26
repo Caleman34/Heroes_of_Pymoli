@@ -1,6 +1,6 @@
 ## Repository Info:
 
-Repository Size: 6 MB
+Repository Size: 6.5 MB
 
 Code can be run using Visual Studio Code or Jupyter Notebook
 
