@@ -1,3 +1,15 @@
+## Repository Info:
+
+Repository Size: 6 MB
+
+Code can be run using Visual Studio Code or Jupyter Notebook
+
+Given player demographic and purchase history of a fictonal game, Heroes of Pymoli, various data frames were created to clean, merge, and analyze the data using the Pandas library.
+
+![1](Images/1.png)
+
+![2](Images/2.png)
+
 ## Heroes of Pymoli
 
 ![Fantasy](Images/Fantasy.png)
